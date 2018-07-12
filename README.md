@@ -28,7 +28,7 @@ docker run \
     --volume ~/.cache/heroku:/root/.cache/heroku \
     --volume ~/.local/share/heroku:/root/.local/share/heroku \
     --volume ~/.netrc:/root/.netrc \
-    --volume $(pwd):/app \
+    --volume "$(pwd)":/app \
     finalgene/heroku-cli login
 ```
 
@@ -42,7 +42,7 @@ docker run \
     --volume ~/.cache/heroku:/root/.cache/heroku \
     --volume ~/.local/share/heroku:/root/.local/share/heroku \
     --volume ~/.netrc:/root/.netrc \
-    --volume $(pwd):/app \
+    --volume "$(pwd)":/app \
     finalgene/heroku-cli help
 ```
 
