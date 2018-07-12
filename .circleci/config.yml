@@ -1,0 +1,53 @@
+version: 2
+
+.tempates:
+  .validate_template: &validate_template
+    docker:
+      -
+        image: finalgene/hadolint:latest
+    working_directory: /app
+    steps:
+      - checkout
+      - setup_remote_docker
+      -
+        run:
+          name: Validate Dockerfile
+          command: |
+            hadolint $VERSION/Dockerfile
+  .build_template: &build_template
+    docker:
+      -
+        image: docker:18.05.0-ce-git
+    working_directory: ~/repo
+    steps:
+      - checkout
+      - setup_remote_docker
+      -
+        run:
+          name: Build application Docker image
+          command: |
+            docker build --tag heroku-cli:$VERSION $VERSION/
+      -
+        run:
+          name: List created images
+          command: |
+            docker images
+
+jobs:
+  validate-7.5:
+    environment:
+      VERSION: "7.5"
+    <<: *validate_template
+  build-7.5:
+    environment:
+      VERSION: "7.5"
+    <<: *build_template
+
+workflows:
+  version: 2
+  validate_and_build:
+    jobs:
+      - validate-7.5
+      - build-7.5:
+          requires:
+            - validate-7.5
