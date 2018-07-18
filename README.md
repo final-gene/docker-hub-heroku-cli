@@ -4,7 +4,9 @@
 This is a image to run the [heroku cli](https://devcenter.heroku.com/categories/command-line).
 
 ## Supported tags and respective Dockerfile links
-* `7.5`, `latest` [(7.5/Dockerfile)](https://github.com/finalgene/docker-hub-heroku-cli/blob/master/7.5/Dockerfile)
+* `7.7`, `latest` [(7.7/Dockerfile)](https://github.com/finalgene/docker-hub-heroku-cli/blob/master/7.7/Dockerfile)
+* `7.6` [(7.6/Dockerfile)](https://github.com/finalgene/docker-hub-heroku-cli/blob/master/7.6/Dockerfile)
+* `7.5` [(7.5/Dockerfile)](https://github.com/finalgene/docker-hub-heroku-cli/blob/master/7.5/Dockerfile)
 
 ## How to use this image
 Run the `heroku-cli` image:
