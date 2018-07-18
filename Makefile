@@ -1,6 +1,6 @@
 NAME = heroku-cli
 
-VERSIONS = 7.5
+VERSIONS = 7.5 7.6 7.7
 
 .PHONY: build
 build: ${VERSIONS}
