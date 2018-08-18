@@ -2,14 +2,14 @@ FROM node:10-alpine
 
 LABEL maintainer="frank.giesecke@final-gene.de"
 
-ENV HEROKU_CLI_VERSION 7.7.8
+ENV HEROKU_CLI_VERSION 7.7.10
 
 RUN apk add --no-cache --virtual=.build-deps bash
 
 SHELL ["/bin/bash", "-o", "pipefail", "-c"]
 
 RUN apk add --no-cache --virtual=.persistent \
-        postgresql-client=10.4-r0
+        postgresql-client=10.5-r0
 
 RUN npm install -g heroku@"${HEROKU_CLI_VERSION}" \
     && npm cache clean --force

@@ -9,7 +9,7 @@ RUN apk add --no-cache --virtual=.build-deps bash
 SHELL ["/bin/bash", "-o", "pipefail", "-c"]
 
 RUN apk add --no-cache --virtual=.persistent \
-        postgresql-client=10.4-r0
+        postgresql-client=10.5-r0
 
 RUN npm install -g heroku@"${HEROKU_CLI_VERSION}" \
     && npm cache clean --force
