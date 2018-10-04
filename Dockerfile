@@ -2,7 +2,7 @@ FROM node:10-alpine
 
 LABEL maintainer="frank.giesecke@final-gene.de"
 
-ENV HEROKU_CLI_VERSION 7.16.0
+ENV HEROKU_CLI_VERSION 7.16.4
 
 RUN apk add --no-cache --virtual=.build-deps bash
 
