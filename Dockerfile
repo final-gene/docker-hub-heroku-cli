@@ -1,18 +1,18 @@
-FROM node:10-alpine
+FROM node:11-alpine
 
 LABEL maintainer="frank.giesecke@final-gene.de"
 
-ENV HEROKU_CLI_VERSION 7.18.5
+ENV HEROKU_CLI_VERSION 7.18.8
 
-RUN apk add --no-cache --virtual=.build-deps bash
+# hadolint ignore=DL3018
+RUN apk add --no-cache --virtual=.build-deps bash curl
 
 SHELL ["/bin/bash", "-o", "pipefail", "-c"]
 
 RUN apk add --no-cache --virtual=.persistent \
         postgresql-client=10.5-r0
 
-RUN npm install -g heroku@"${HEROKU_CLI_VERSION}" \
-    && npm cache clean --force
+RUN curl https://cli-assets.heroku.com/install.sh | sh
 
 RUN apk del .build-deps
 
