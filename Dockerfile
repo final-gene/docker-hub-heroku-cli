@@ -2,7 +2,7 @@ FROM node:11-alpine
 
 LABEL maintainer="frank.giesecke@final-gene.de"
 
-ENV HEROKU_CLI_VERSION 7.19.3
+ENV HEROKU_CLI_VERSION 7.19.4
 
 # hadolint ignore=DL3018
 RUN apk add --no-cache --virtual=.build-deps bash curl
