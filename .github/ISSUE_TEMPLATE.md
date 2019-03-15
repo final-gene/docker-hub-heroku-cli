@@ -7,7 +7,7 @@ Provide a narrative description of what you are trying to accomplish.
 
 <!-- Please provide the minimum code necessary to recreate the issue -->
 
-```php
+```shell
 ```
 
 ### Expected results
