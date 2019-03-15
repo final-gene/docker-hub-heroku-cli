@@ -2,12 +2,15 @@ FROM node:11-alpine
 
 LABEL maintainer="frank.giesecke@final-gene.de"
 
-ENV HEROKU_CLI_VERSION 7.22.4
+ENV HEROKU_CLI_VERSION 7.22.7
 
 # hadolint ignore=DL3018
-RUN apk add --no-cache --virtual=.build-deps bash curl
+RUN apk add --no-cache bash
 
 SHELL ["/bin/bash", "-o", "pipefail", "-c"]
+
+# hadolint ignore=DL3018
+RUN apk add --no-cache --virtual=.build-deps curl
 
 # hadolint ignore=DL3018
 RUN apk add --no-cache --virtual=.persistent \
