@@ -1,11 +1,13 @@
 NAME = heroku-cli
 
+default: lint build
+
 .PHONY: lint
 lint:
 	@docker run --rm -i hadolint/hadolint < Dockerfile
 
 .PHONY: build
-build: lint
+build:
 	@docker build --tag finalgene/${NAME}:dev ./
 	@docker images finalgene/${NAME}:dev
 
