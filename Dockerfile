@@ -1,8 +1,8 @@
-FROM node:13-alpine
+FROM node:14-alpine
 
 LABEL maintainer="frank.giesecke@final-gene.de"
 
-ENV HEROKU_CLI_VERSION 7.38.2
+ENV HEROKU_CLI_VERSION 7.42.1
 
 # hadolint ignore=DL3018
 RUN apk add --no-cache bash
@@ -14,7 +14,7 @@ RUN apk add --no-cache --virtual=.build-deps curl
 
 # hadolint ignore=DL3018
 RUN apk add --no-cache --virtual=.persistent \
-        postgresql-client
+    postgresql-client
 
 RUN curl https://cli-assets.heroku.com/install.sh | sh
 
