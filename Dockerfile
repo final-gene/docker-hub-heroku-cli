@@ -4,15 +4,12 @@ LABEL maintainer="frank.giesecke@final-gene.de"
 
 ENV HEROKU_CLI_VERSION 7.52.0
 
-# hadolint ignore=DL3018
 RUN apk add --no-cache bash
 
 SHELL ["/bin/bash", "-o", "pipefail", "-c"]
 
-# hadolint ignore=DL3018
 RUN apk add --no-cache --virtual=.build-deps curl
 
-# hadolint ignore=DL3018
 RUN apk add --no-cache --virtual=.persistent \
     postgresql-client
 
