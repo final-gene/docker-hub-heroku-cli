@@ -1,5 +1,4 @@
 # Heroku CLI
-[![CircleCI](https://circleci.com/gh/final-gene/docker-hub-heroku-cli/tree/master.svg?style=svg)](https://circleci.com/gh/final-gene/docker-hub-heroku-cli/tree/master) [![Codacy Badge](https://api.codacy.com/project/badge/Grade/ba9102baae1444b2aaa3787faf44057d)](https://www.codacy.com/app/final-gene/docker-hub-heroku-cli?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=final-gene/docker-hub-heroku-cli&amp;utm_campaign=Badge_Grade)
 
 This is a image to run the [heroku cli](https://devcenter.heroku.com/categories/command-line).
 
