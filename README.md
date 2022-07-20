@@ -1,6 +1,8 @@
 # Heroku CLI
 
-This is a image to run the [heroku cli](https://devcenter.heroku.com/categories/command-line).
+[![Docker build and publish](https://github.com/final-gene/docker-hub-heroku-cli/actions/workflows/publish.yml/badge.svg)](https://github.com/final-gene/docker-hub-heroku-cli/actions/workflows/publish.yml)
+
+This is an image to run the [heroku cli](https://devcenter.heroku.com/categories/command-line).
 
 ## How to use this image
 Run the `heroku-cli` image:
