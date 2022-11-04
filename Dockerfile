@@ -1,4 +1,4 @@
-FROM node:18-alpine
+FROM node:19-alpine
 
 LABEL maintainer="frank.giesecke@final-gene.de"
 
